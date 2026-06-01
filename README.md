@@ -8,11 +8,13 @@ This exists because formula-based approaches (distance / speed * multiplier) hit
 
 **Single prediction.** Enter a route and get an ETA with an 80% confidence band, plus the feature importances behind it. Below: 6pm on a Wednesday in the rain — the model predicts ~39 min, about 5 min (15%) more than the naive distance/speed formula, because it learned that rush hour and wet roads compound. The formula just multiplies and misses it.
 
-<!-- paste the scenario-1 predict screenshot here -->
+<img width="1512" height="908" alt="routeml demo" src="https://github.com/user-attachments/assets/58714cd2-4974-4af9-b30c-51816126f238" />
+
+---
 
 **ML vs formula, across 105 scenarios.** Every scenario run through both approaches. Points off the diagonal are where the model diverges from the formula, and the gap widens with distance and bad weather — exactly where flat formulas break down.
 
-<!-- paste the compare graph screenshot here -->
+<img width="1512" height="982" alt="routeml comparison" src="https://github.com/user-attachments/assets/11fca9d7-3cf9-4ed9-9a3c-be13869fa8d6" />
 
 ## What it does
 
