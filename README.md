@@ -14,7 +14,7 @@ This exists because formula-based approaches (distance / speed * multiplier) hit
 
 **ML vs formula, across 105 scenarios.** Every scenario run through both approaches. Points off the diagonal are where the model diverges from the formula, and the gap widens with distance and bad weather — exactly where flat formulas break down.
 
-<img width="1512" height="982" alt="routeml comparison" src="https://github.com/user-attachments/assets/11fca9d7-3cf9-4ed9-9a3c-be13869fa8d6" />
+<img width="971" height="549" alt="Screenshot 2026-06-02 at 1 10 47 AM" src="https://github.com/user-attachments/assets/56abf203-6dcf-4360-9177-3e3a3c91c0e2" />
 
 ## What it does
 
