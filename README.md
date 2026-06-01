@@ -4,6 +4,16 @@ ML-powered delivery ETA prediction engine. Trained on synthetic data, served ove
 
 This exists because formula-based approaches (distance / speed * multiplier) hit a ceiling fast. The real world is non-linear. ML learns that.
 
+## Demo
+
+**Single prediction.** Enter a route and get an ETA with an 80% confidence band, plus the feature importances behind it. Below: 6pm on a Wednesday in the rain — the model predicts ~39 min, about 5 min (15%) more than the naive distance/speed formula, because it learned that rush hour and wet roads compound. The formula just multiplies and misses it.
+
+<!-- paste the scenario-1 predict screenshot here -->
+
+**ML vs formula, across 105 scenarios.** Every scenario run through both approaches. Points off the diagonal are where the model diverges from the formula, and the gap widens with distance and bad weather — exactly where flat formulas break down.
+
+<!-- paste the compare graph screenshot here -->
+
 ## What it does
 
 You give it a route (origin, destination, distance, time of day, weather). It returns:
@@ -72,7 +82,7 @@ The formula gives you one number: "23 minutes." That is almost certainly wrong. 
 
 On the synthetic test set (20k samples):
 - LightGBM MAE: ~2-3 minutes
-- LightGBM R2: ~0.98+
+- LightGBM R2: ~0.93
 - Formula MAE: typically 4-6 minutes (varies with scenario mix)
 
 The ML model is consistently 40-60% more accurate on MAE.
