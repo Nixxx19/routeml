@@ -188,7 +188,7 @@ export default function Compare() {
                 Points on the diagonal = agreement. Deviation = where ML learned non-linear patterns formulas miss.
               </p>
               <ResponsiveContainer width="100%" height={350}>
-                <ScatterChart margin={{ top: 10, right: 10, bottom: 20, left: 10 }}>
+                <ScatterChart margin={{ top: 10, right: 10, bottom: 28, left: 10 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#1f2937" />
                   <XAxis
                     dataKey="formula"
@@ -196,7 +196,7 @@ export default function Compare() {
                     unit=" min"
                     stroke="#6b7280"
                     fontSize={11}
-                    label={{ value: "Formula (min)", position: "bottom", fill: "#6b7280", fontSize: 11 }}
+                    label={{ value: "Formula (min)", position: "insideBottom", offset: -2, fill: "#6b7280", fontSize: 11 }}
                   />
                   <YAxis
                     dataKey="ml"
@@ -210,7 +210,7 @@ export default function Compare() {
                     contentStyle={{ backgroundColor: "#111827", border: "1px solid #374151", borderRadius: "8px" }}
                     labelStyle={{ color: "#9ca3af" }}
                   />
-                  <Legend />
+                  <Legend verticalAlign="top" height={28} wrapperStyle={{ fontSize: 11 }} />
                   <Scatter
                     name="Clear"
                     data={scatterData.filter((d) => d.weather === "clear")}
